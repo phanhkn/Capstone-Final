@@ -14,20 +14,18 @@ function Login({ token, setToken, setUser, setCart }) {
   const handleLogin = async () => {
     setLoading(true);
     try {
-      // Calling api helper to login user
       const response = await loginUser(username, password);
       response && setErr(null);
       response && localStorage.setItem("capstone-token", response.token);
       setToken(response.token);
       setUser(username);
       localStorage.setItem("capstone-user", username);
-      // Update cart items based on logged in user
       setCart(JSON.parse(localStorage.getItem(`${username}-cart`)) || []);
       setLoading(false);
       navigate("/");
     } catch (error) {
       console.error(error);
-      setErr("Wrong username or password. Please try again");
+      setErr("Wrong username or password. Please try again!");
       setLoading(false);
     }
   };

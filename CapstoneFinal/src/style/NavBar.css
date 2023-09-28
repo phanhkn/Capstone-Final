@@ -12,6 +12,12 @@
   align-items: center;
 }
 
+.title {
+  justify-content: flex-start;
+  width: 50%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 .nav-links-div a {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: larger;

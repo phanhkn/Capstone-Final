@@ -15,7 +15,6 @@ function Register({ token, setToken }) {
 
   const handleSubmit = async () => {
     setLoading(true);
-    // Create new user object
     const newUser = {
       email,
       username,
@@ -27,11 +26,7 @@ function Register({ token, setToken }) {
     };
 
     try {
-      // Calling api helper to register user
       const response = await registerUser(newUser);
-      // response && setErr(null);
-      // response && localStorage.setItem("capstone-token", response.token);
-      // setToken(response.token);
       setLoading(false);
       navigate("/");
     } catch (error) {
@@ -98,7 +93,7 @@ function Register({ token, setToken }) {
         <label htmlFor="password" className="register-label">
           Password:
           <input
-            type="text"
+            type="password"
             name="password"
             className="register-inputs"
             value={password}

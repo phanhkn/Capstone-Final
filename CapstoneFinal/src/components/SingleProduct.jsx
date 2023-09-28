@@ -8,26 +8,25 @@ export default function SingleProduct({ products, cart, setCart }) {
   const item = products
     ? products.filter((product) => product.id === Number(params.id))
     : [];
-  // this will destructure the array and will assign the first index to product var
   const product = item[0];
 
-  // Check if item is already in the cart
   const [inCart, setInCart] = useState(
     cart.find((item) => item.id === product.id)
   );
 
   const handleClick = () => {
-    // If item is already in cart, button will change to Remove and will remove the item from cart
     if (inCart) {
       const newItems = cart.filter((item) => item.id !== product.id);
       setCart(newItems);
     } else {
-      // If item is not in cart then add item in the cart
       setCart((prevItems) => {
-        return [...prevItems, product];
+        const productToAdd = {
+          ...product,
+          quantity: product.quantity || 1,
+        };
+        return [...prevItems, productToAdd];
       });
     }
-    // Toggle button which switches the button details from Add to Remove or vice versa
     setInCart(!inCart);
   };
 

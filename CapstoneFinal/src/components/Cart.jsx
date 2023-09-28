@@ -6,12 +6,10 @@ export default function Cart({ cart, setCart }) {
   const [grandTotal, setGrandTotal] = useState(0);
   const navigate = useNavigate();
 
-  // Function to open items in cart in single product view.
   const openItem = (id) => {
     navigate(`/products/${id}`);
   };
 
-  // Function to increase item quantity in the cart
   function increaseQty(targetItem) {
     setCart((prevCart) => {
       return prevCart.map((item) => {
@@ -25,7 +23,6 @@ export default function Cart({ cart, setCart }) {
     });
   }
 
-  // Function to decrease item quantity in the cart
   function decreaseQty(targetItem) {
     setCart((prevCart) => {
       return prevCart.map((item) => {
@@ -40,7 +37,6 @@ export default function Cart({ cart, setCart }) {
     });
   }
 
-  // Side effect to calculate the grand total when the cart changes
   useEffect(() => {
     let total = 0;
     cart.forEach((item) => {
@@ -125,7 +121,7 @@ export default function Cart({ cart, setCart }) {
           </div>
         </>
       ) : (
-        <h1>Cart is Empty</h1>
+        <h1>Your cart is empty!</h1>
       )}
     </div>
   );

@@ -9,14 +9,12 @@ function GetAllProducts({ products, loading, cart, setCart }) {
   const [titleText, setTitleText] = useState("All Products");
   const [sortPrice, setSortPrice] = useState("default");
 
-  // Filtering products based on category selection
   const filteredCategory = products
-    ? category === "all" // if category is all then return products
+    ? category === "all"
       ? products
       : products.filter((product) => product.category === category)
     : [];
 
-  // Filtering filtered category products by search bar text.
   const filteredProducts = filteredCategory.filter(
     (product) =>
       product.description
@@ -25,15 +23,11 @@ function GetAllProducts({ products, loading, cart, setCart }) {
       product.title.toLowerCase().includes(searchedProduct.toLowerCase())
   );
 
-  // Sorting products based on price
   if (sortPrice === "asc") {
-    console.log("asc has run");
     filteredProducts.sort((a, b) => a.price - b.price);
   } else if (sortPrice === "desc") {
     filteredProducts.sort((a, b) => b.price - a.price);
   }
-
-  console.log(sortPrice);
 
   return (
     <>
