@@ -1,7 +1,5 @@
-// Main API to fetch data from
 const API_URL = "https://fakestoreapi.com";
 
-// Fetch all products
 export async function fetchAllProducts() {
   try {
     const response = await fetch(`${API_URL}/products`);
@@ -12,7 +10,6 @@ export async function fetchAllProducts() {
   }
 }
 
-// Login function
 export async function loginUser(username, password) {
   try {
     const response = await fetch(`${API_URL}/auth/login`, {
@@ -32,7 +29,6 @@ export async function loginUser(username, password) {
   }
 }
 
-// Register user function
 export async function registerUser(newUser) {
   try {
     const response = await fetch(`${API_URL}/users`, {
