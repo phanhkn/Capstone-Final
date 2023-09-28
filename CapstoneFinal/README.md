@@ -4,4 +4,4 @@
 
 #Thank you FSA as well as Aisha, Chuck, and Woody for your guidance through these past seven months!
 
-#Thank you all peers that I worked with and helped review, revise, and contribute suggestions for completion
+#Thank you all peers that I worked with and helped review, revise, and contribute suggestions for completion.
