@@ -51,7 +51,6 @@ function GetAllProducts({ products, loading, cart, setCart }) {
                 type="text"
                 id="search-product-input"
                 name="search-product-input"
-                placeholder=" Anything"
                 value={searchedProduct}
                 onChange={(e) => {
                   setSearchedProduct(e.target.value);

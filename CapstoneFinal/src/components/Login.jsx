@@ -45,7 +45,6 @@ function Login({ token, setToken, setUser, setCart }) {
         <div className="login-inputs">
           <label>Username:</label>
           <input
-            placeholder="johnd"
             type="text"
             name="username"
             value={username}
@@ -55,7 +54,6 @@ function Login({ token, setToken, setUser, setCart }) {
         <div className="login-inputs">
           <label>Password:</label>
           <input
-            placeholder="m38rmF$"
             type="password"
             name="password"
             value={password}
@@ -79,7 +77,7 @@ function Login({ token, setToken, setUser, setCart }) {
       )}
       <div className="register-div">
         <p>
-          Don't have an account? <Link to={"/register"}>Register</Link> here
+          Don't have an account? <Link to={"/register"}>Register</Link> here!
         </p>
       </div>
     </div>
