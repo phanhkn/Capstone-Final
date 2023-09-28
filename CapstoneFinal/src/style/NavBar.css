@@ -1,0 +1,46 @@
+.nav-bar-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.6rem;
+  background-color: #3399ff;
+}
+
+.nav-links-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links-div a {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: larger;
+  font-weight: 600;
+  padding: 15px 15px;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.cart-link {
+  width: 54px;
+  height: 23px;
+  text-align: center;
+}
+
+.nav-links-div a:hover,
+.active {
+  box-shadow: 0 0 10px white;
+  border-radius: 5px;
+  background-color: #3399ff;
+  transition: all 0.2s ease;
+}
+
+.cart-qty {
+  background-color: rgb(209, 2, 2);
+  color: white;
+  font-size: xx-small;
+  padding: 4px;
+  margin: 0;
+  border-radius: 90%;
+}
